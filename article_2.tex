@@ -166,19 +166,24 @@ modo una mayor abstracción aislando la componente "lógica de la aplicación" d
 
 
 \subsection{Cotenedores con Docker}
+Docker es una plataforma de software que le permite crear, probar e implementar aplicaciones rápidamente. Docker empaqueta software en unidades estandarizadas llamadas contenedores que incluyen todo lo necesario para que el software se ejecute, incluidas bibliotecas, herramientas de sistema, código y tiempo de ejecución. Con Docker, puede implementar y ajustar la escala de aplicaciones rápidamente en cualquier entorno con la certeza de saber que su código se ejecutará.
+
+La ejecución de Docker en AWS les ofrece a los desarrolladores y administradores una manera muy confiable y económica de crear, enviar y ejecutar aplicaciones distribuidas en cualquier escala. AWS es compatible con ambos modelos de licencia de Docker: Docker Community Edition (CE) de código abierto y Docker Enterprise Edition (EE) basada en suscripción.
+
+Docker, me permite meter en un contenedor (“una caja”, algo auto contenido, cerrado) todas aquellas cosas que mi aplicación necesita para ser ejecutada (java, Maven, tomcat…) y la propia aplicación. Así yo me puedo llevar ese contenedor a cualquier máquina que tenga instalado Docker y ejecutar la aplicación sin tener que hacer nada más, ni preocuparme de qué versiones de software tiene instalada esa máquina, de si tiene los elementos necesarios para que funcione mi aplicación , de si son compatibles.
 
  \textbf{A). Orquesta de Aplicación }\\
-\textbf{}\\
-\textbf{}\\
-\textbf{}\\
+\textbf{}Existen múltiples definiciones sobre el concepto de orquestación de aplicaciones pero de un modo simple, podemos definir la orquestación de servicios o aplicaciones como el uso de la automatización para la creación y composición de la arquitectura, herramientas y procesos utilizados por operadores humanos para entregar un servicio.\\
+\textbf{}La orquestación aprovecha tareas automatizadas y procesos predefinidos para permitir la creación de infraestructura complejas y para conseguir el aprovechamiento de los recursos de forma óptima y automatizada. Podemos considerar, a modo de analogía, el concepto de orquestación como un proceso y la automatización como una tarea.\\
+\textbf{}De este modo, el objetivo principal de la orquestación consiste en la automatización de procesos orientados al despliegue y ciclo de vida de las aplicaciones o servicios. Y la automatización de procesos en los despliegues software se basan en el uso de algún tipo de software que facilite la\\
  \textbf{B). Docker y otros container: más alla de la virtualizacion}\\
-\textbf{}\\
-\textbf{}\\
+\textbf{}En un mundo donde cada vez es más común el uso de servicios informáticos en la nube y cuyos principios básicos para explicar su éxito radican en la alta disponibilidad, el diseño de tolerancia a fallos, el escalado y la elasticidad, parece que se hace obligatorio que hablemos sobre los contenedores. En este post nos referimos en concreto al proyecto “Docker”.\\
+\textbf{}Cuando pensábamos que ya habíamos alcanzado el máximo ahorro de recursos con la virtualización de todo el hardware posible de nuestra infraestructura (servidores, redes, cabinas de discos, etc.), desde hace poco tiempo se ha extendido el uso de los llamados contenedores. La idea de esta post es repasar los conceptos básicos que rodean al mundo de los contenedores y dar una visión general sobre esta herramienta.\\
  \textbf{C). Contenedor Docker, la Tecnología de Contenedores a Mano}\\
-\textbf{}\\
+\textbf{}Para hablar de futuro, es necesario observar el camino recorrido y los avances tecnológicos no son ajenos a ellos. Si hablamos de virtualización 3.0, se podría decir que inició desde el uso de los primeros mainframes los cuales permitían que varios usuarios operaran al mismo tiempo a través de los “terminales tontos”.\\
 \textbf{}\\
  \textbf{D).¿Son Seguros los Contenedores}\\
-\textbf{}\\
+\textbf{}Podemos pensar en un contenedor como un servidor que arranca desde una imagen estática predefinida con un sistema operativo con un kernel Linux y con las librerías y recursos mínimos necesarios de CPU, memoria, almacenamiento, etc. Realmente, un contenedor consiste en el empaquetado de una aplicación para que pueda correr en cualquier sistema abstrayéndose de la plataforma sobre la que está corriendo.\\
 
 
 
