@@ -17,7 +17,7 @@
 \title{Escuela Profesional de Ingenieria de Sistemas}
 \title{VIRTUALIZACIÓN Y CONTENEDORES}
 \author{Yofer Nain Catari Cabrera}
-
+\author{Orestes Ramirez Ticona}
 \affiliation{%
  Universidad Privada de Tacna \textbackslash Facultad de Ingenieria \textbackslash Escuela Profesional de Ingenieria de Sistemas
 }%
@@ -43,7 +43,7 @@ corporativo. Finalizamos con la implantación, instalación y puesta en marcha d
 sistema estudiado acompañado de unos ejemplos de orquestación usando dos
 aplicaciones de código abierto que se ven bastante habitualmente en los entornos
 corporativos actuales para dar soporte a distintas soluciones.
-.\\
+\\
 \textbf{Palabras clave:}   Virtualizacion y Contenedores .\\
 
 \begin{center}
@@ -91,16 +91,41 @@ modo una mayor abstracción aislando la componente "lógica de la aplicación" d
 
 \subsection{General:}
 
--  
+-  La puesta en marcha de una solución que permita la Orquestación de aplicaciones corporativas a través
+de la implantación de un sistema de contenedores virtuales usando la plataforma abierta Docker 
 \subsection{Específicos:}
-- 
+- Reducción del gasto en infraestructura de la empresa para el despliegue de aplicaciones
+corporativas
 
 %-----------------------------------------------------------------
 \section {Marco Teórico}\label{sec:3}
 
 
 \subsection{Máquinas Virtuales}
+Una de las tecnologías principales que han propiciado la consolidación del cloud es la
+virtualización, consistente en la creación o simulación a través de software de una versión virtual
+de algún recurso tecnológico. Este recurso suele ser habitualmente CPU, Memoria,
+Almacenamiento y componentes de Red (o la combinación de varios) y la capa de software que
+los gestiona y maneja, conocida como Hypervisor o VMM (Virtual Machine Monitor), que crea una
+capa de abstracción entre estos recursos y el sistema operativo de las máquinas “invitado” (como
+se conocen los sistemas operativos virtuales que se ejecutan sobre el mismo anfitrión y sobre el
+que comparten recursos).
+Dicho de otra manera y en un sentido más general, virtualizar es particionar un servidor físico en
+varios servidores virtuales compartiendo todos ellos los recursos hardware de la máquina anfitrión.
+
 \subsection{Contenedores}
+La virtualización basada en contenedores es una aproximación a la virtualización en la cual se
+ejecuta la capa de virtualización como una aplicación aislada dentro del sistema operativo del
+equipo anfitrión. En este tipo de sistemas sólo se ejecuta un único núcleo del sistema operativo o
+Kernel19, que es el del sistema operativo anfitrión, y este ayudado por el software de virtualización
+de contenedores específico es el que se encarga de crear nuevos entornos de ejecución (que
+podríamos comparar con las máquinas virtuales) y que reciben el nombre de contenedores.
+Un contenedor es sencillamente un proceso para el sistema operativo que internamente contiene
+la aplicación que queremos ejecutar y todas las dependencias derivadas de la misma.
+Empaquetamos una aplicación en una unidad estandarizada para desempeñar un servicio que
+contiene lo necesario para funcionar como un todo (código, librerías, software, etc), empaquetado
+bajo la analogía de un contenedor.
+
 \subsection{Diferencias}
 
 %-----------------------------------------------------------------
@@ -156,7 +181,21 @@ ser replicado de forma rápida, fiable y sistemática.
 \subsection{Orquesta de Aplicacion}
 
 \subsection{Docker y Otros Container : Mas alla de la virtualizacion}
-- 
+- Docker es una aplicación que sigue el modelo cliente-servidor. Así, a nivel de arquitectura de la
+aplicación tenemos fundamentalmente una parte de servidor denominada “Docker Server” y una
+aplicación cliente, denominada “Docker Client” que hace uso de funcionalidades de la parte
+servidor, fundamentalmente a través de un cliente en línea de comandos. El modo servidor de
+Docker es el que se encarga de toda la gestión, mantenimiento y creación de los contenedores y
+su estructura de funcionamiento. La aplicación es única para ambos modos, sólo que al ejecutarla
+se indica si lo que queremos arrancar es el modo cliente o el modo servidor.
+Existe también un tercer componente denominado, Docker Registry. Se trata de un repositorio
+donde se albergan las imágenes de los contenedores virtuales a emplear.
+Mediante el cliente Docker se envían ordenes al servidor Docker que es el que gestiona el
+funcionamiento del sistema base de contenedores y este a su vez, mediante el uso de la librería
+libcontainer interactúa directamente con las distintas utilidades del Kernel para acceder a las
+utilidades de virtualización. Aunque libcontainer es actualmente el método nativo de interacción
+con el Kernel, Docker puede usar otras librerías o interfaces intermedias, como pueden ser libvirt o
+LXC.
 \subsection{Contenedor Docker la Tecnologia de Contenedores a mano}
 \subsection{Ventajas de la Tecnologia de Contenedores}
 \subsection{¿Son Seguros los Contenedores?}
