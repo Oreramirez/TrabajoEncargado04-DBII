@@ -146,8 +146,38 @@ modo una mayor abstracción aislando la componente "lógica de la aplicación" d
 
 
 \begin{itemize}
-	\item El mapeo objeto-relacional (ORM) es una técnica para mapear sistemas orientados a objetos a bases de datos relacionales.
-	\item Utilizar las diferentes herramientas de ORM, da mas rapidez y eficiencia a la construcción de base de datos.
+	\item Como hemos podido comprobar a lo largo de es proyecto, partimos de los requisitos base de una
+empresa que tenia un centro de datos con servidores propios, con personal para mantenerlo y que
+pretendía encontrar y validar un sistema de código abierto que les permitiese implantar un sistema
+de orquestación de aplicaciones.
+Como ha quedado patente, se han conseguido todos los objetivos iniciales que se planteaban al
+inicio del mismo.
+Para ello, en primer lugar se ha realizado un análisis de las distintas tecnologías de virtualización
+clásica y de virtualización de contenedores, comparándolas y analizando cual era la solución por
+la que debíamos optar para la orquestación de aplicaciones. Una vez visto que la solución pasaba
+por el uso de la virtualización de contenedores, se estudio la tecnología subyacente que la hacia
+posible, para poder entender su funcionamiento y posibles limitaciones. A continuación se
+analizaron varias alternativas de aplicaciones de virtualización y orquestación, con la premisa
+inicial del uso de software de código abierto, que nos permitieran acometer una solución, hasta
+decantarnos finalmente por la herramienta Docker y su ecosistema de aplicaciones como solución
+para conseguir los objetivos planteados.
+Al mismo tiempo que se selecciono la aplicación, se planteo una arquitectura complementaria para
+el despliegue de la solución Docker.
+Y llegados a este punto, se realizo un análisis exhaustivo del funcionamiento de todo el
+ecosistema de aplicaciones de Docker, analizando y estudiando su funcionamiento y
+documentándolo con ejemplos prácticos.
+Considerando que existen dos tipos de orquestaciones, la orquestación estática y la orquestación
+dinámica, analizamos en profundidad dos de las herramientas del ecosistema Docker que
+permiten dar solución a los objetivos que nos planteábamos: Comprobamos como Docker
+Compose nos permitía orquestar servicios de manera estática y como Docker Swarm nos permitía
+lo mismo pero esta vez para orquestados dinámicamente con lo cual, la solución propuesta
+cumple todas la condiciones iniciales que nos marcamos.
+Finalmente se realizaron dos ejemplos prácticos completos de cada una de las distintas
+orquestaciones, cada una con su herramienta particular (Docker Compose y Docker Swarm)
+pudiendo verificar que la elección de la solución Docker nos permitió dar una solución completa
+que incluso dotaba a nuestro proyecto de posibilidades de escalado y orquestación con una
+sencillez más allá de las esperadas personalmente al comienzo del mismo.
+
 \end{itemize}
 
 \section{webgrafia}\label{sec:9}
