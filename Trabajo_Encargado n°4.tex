@@ -26,14 +26,48 @@
 \begin{center}
 \textbf{Resumen}
 \end{center}
-En este artículo aprenderemos sobre el concepto y sus herramientas de mapeo objeto-relacional que nos permitirá crear una capa de acceso a los datos de una base de datos relacional, de tal forma que las tablas se transforman en clases y las filas de las tablas en objetos.\\
-\textbf{Palabras clave:}   ORM, base de datos, herramientas, clases, objetos.\\
+En este trabajo se realizará un estudio de las tecnologías de virtualización de
+contenedores con el fin de implementar y poner en marcha un sistema que permita
+orquestar el despliegue de aplicaciones sobre un entorno empresarial.
+Para ello, se realizará en primera instancia un análisis de los sistemas de virtualización
+más habituales para continuar introduciendo los conceptos y sistemas de virtualización
+de contenedores. Una vez introducida la parte teórica se analizan distintas
+herramientas de virtualización de contenedores centrándonos en la herramienta
+Docker para la cual se detalla su arquitectura, funcionamiento y proceso de instalación
+para finalizar con un par de ejemplos prácticos de despliegue de servicios.
+A continuación, una vez que ya hemos implementado y analizado un sistema de
+virtualización de contenedores como tecnología necesaria de base, pasamos a
+estudiar distintas soluciones del mercado para implementar un sistemas de
+orquestación basado en microservicios para el despliegue de aplicaciones de carácter
+corporativo. Finalizamos con la implantación, instalación y puesta en marcha del
+sistema estudiado acompañado de unos ejemplos de orquestación usando dos
+aplicaciones de código abierto que se ven bastante habitualmente en los entornos
+corporativos actuales para dar soporte a distintas soluciones.
+.\\
+\textbf{Palabras clave:}   Virtualizacion y Contenedores .\\
 
 \begin{center}
 \textbf{Abstract}
 \end{center}
-In this article we learn about concept and tools of Object-Relational mapping ORM that we will allow us to create an access layer to the data of a relational database, in such a way that the tables are transformed into classes and the rows of the table into objects.\\
-\textbf{Keywords:}   ORM, database, tools, classes, objects.
+In this job we do a study of container virtualization technologies will be carried out in
+order to implement a system that allows orchestrating the deployment of applications
+and services in enterprise environments.
+This will be done in the first instance an analysis of the most common virtualization
+systems to continue introducing concepts and systems of containerization
+virtualization. Once the theoretical part is introduced, different container virtualization
+tools are analyzed, focusing on the Docker tool, which details its architecture, operation
+and installation process to finish with a couple of practical examples of service
+deployment.
+Then, once we have already implemented and analyzed a container virtualization
+system and all necessary background technology, we started to study different
+solutions in the market to implement a micro-services based orchestration systems for
+the deployment of corporate applications.
+Then finish with timplementation, installation and first steps of the studied system
+accompanied by some examples of orchestration using two open source applications
+that are quite commonly used in the current corporate environments to support
+different solutions.
+\\
+\textbf{Keywords:}   Virtualization and Containers
 
 \end{abstract}
 
@@ -44,14 +78,19 @@ In this article we learn about concept and tools of Object-Relational mapping OR
 %\tableofcontents
 
 \section {Introducción}\label{sec:1}
-Existen una gran variedad de herramientas para realizar el Mapeo Objeto-Relacional, ya sean libres como de pago. Algunas de estas estan ligadas al lenguaje de programacion que es orientada a objetos. Para minimizar estas dificultades de persistencia de datos, existen herramientas que se encargan de generar de manera automática el acceso a los datos, abstrayendo al programador de esta tarea. Son las llamadas herramientas ORM.
-Estas herramientas que se mencionarán en el articulo, tanto para Java, .Net, PHP y Python, son una buena solucion para el desarrollo de aplicaciones de programacion orientadas a objetos (POO). 
-El aprendizaje del lenguaje de la herramienta ORM puede ser algo complejo ya que, para poder sacar el máximo provecho a la herramienta, es necesario conocer en profundidad cómo funciona la misma.
+La tecnología que ha llegado para complementar y completar la virtualización de servidores es la
+virtualización de contenedores de aplicaciones. Esta tecnología va un paso mas allá en el
+paradigma de la virtualización, permitiendo no sólo el salto de virtualizar servidores sino también
+de virtualizar directamente un contenedor donde se ejecuta una aplicación, permitiendo de este
+modo una mayor abstracción aislando la componente "lógica de la aplicación" del componente
+“sistema operativo”.
 
 
 %-----------------------------------------------------------------
 \section{Objetivos}\label{sec:2}
+
 \subsection{General:}
+
 -  
 \subsection{Específicos:}
 - 

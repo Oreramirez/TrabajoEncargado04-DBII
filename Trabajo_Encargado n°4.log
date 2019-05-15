@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.15)  15 MAY 2019 10:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.15)  15 MAY 2019 10:53
 entering extended mode
 **"./Trabajo_Encargado n°4.tex"
 ("Trabajo_Encargado n°4.tex"
@@ -409,33 +409,33 @@ G,.JBIG2,.JB2,.eps]
 \openout3 = `"Trabajo_Encargado n°4Notes.bib"'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--31
+Underfull \hbox (badness 10000) in paragraph at lines 29--48
   
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 42.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 76.
 
 ("C:\Users\Andinosoft - Peru\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\o
 mscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 42.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 76.
  [1{C:/Users/Andinosoft - Peru/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.ma
 p}]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 149.
 
 No file "Trabajo_Encargado n°4".bbl.
 [2] ("Trabajo_Encargado n°4.aux") ) 
 Here is how much of TeX's memory you used:
  4113 strings out of 492945
  56763 string characters out of 3120922
- 134495 words of memory out of 3000000
+ 137495 words of memory out of 3000000
  7973 multiletter control sequences out of 15000+200000
  5452 words of font info for 20 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,5n,29p,471b,220s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,5n,29p,293b,220s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Andinosoft - Peru/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Andinoso
 ft - Peru/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx
@@ -446,7 +446,7 @@ u/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 C:/Users/Andinosoft - Peru/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmsy9.pfb><C:/Users/Andinosoft - Peru/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on "Trabajo_Encargado n°4.pdf" (2 pages, 95265 bytes).
+Output written on "Trabajo_Encargado n°4.pdf" (2 pages, 97692 bytes).
 PDF statistics:
  37 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
