@@ -115,11 +115,17 @@ modo una mayor abstracción aislando la componente "lógica de la aplicación" d
 %-----------------------------------------------------------------
 \section {Virtualizacion de Contenedores}\label{sec:5}
 
-La virtualización de contenedores no exige de una máquina física para poder ejecutarse
-mientras que un sistema de virtualización clásico necesita de un equipo físico anfitrión y un
-hypervisor para realizar el control. En el caso del software necesario para la virtualización
-de contenedores puede ejecutarse sin problemas sobre un servidor virtual como equipo
-anfitrión, lo cual permite una mayor versatilidad.
+La virtualización basada en contenedores es una aproximación a la virtualización en la cual se
+ejecuta la capa de virtualización como una aplicación aislada dentro del sistema operativo del
+equipo anfitrión. En este tipo de sistemas sólo se ejecuta un único núcleo del sistema operativo o
+Kernel19, que es el del sistema operativo anfitrión, y este ayudado por el software de virtualización
+de contenedores específico es el que se encarga de crear nuevos entornos de ejecución (que
+podríamos comparar con las máquinas virtuales) y que reciben el nombre de contenedores.
+Un contenedor es sencillamente un proceso para el sistema operativo que internamente contiene
+la aplicación que queremos ejecutar y todas las dependencias derivadas de la misma.
+Empaquetamos una aplicación en una unidad estandarizada para desempeñar un servicio que
+contiene lo necesario para funcionar como un todo (código, librerías, software, etc), empaquetado
+bajo la analogía de un contenedor.
 
 \subsection{Diferencia Entre Virtualizacion Clasica y Virualizacion de Contenedores}
 \subsection{Tecnologia a Utilizar}
