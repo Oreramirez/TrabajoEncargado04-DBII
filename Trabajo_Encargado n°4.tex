@@ -125,13 +125,25 @@ modo una mayor abstracción aislando la componente "lógica de la aplicación" d
 
 %-----------------------------------------------------------------
 \section{Contenedores Docker}\label{sec:6}
+
+
+Además de la propia herramienta principal de Docker para el control y gestión de los
+contenedores, existe un importante ecosistema de aplicaciones y utilidades integrado en el propia
+Docker que permite dotar a esta solución de un gran numero de herramientas y funcionalidades
+adicionales que aportan distintas soluciones de valor. Docker Machine, Docker Swarm y Docker
+Compose son tres de las más salientables y que combinadas, permiten que los contenedores
+sean más portables y escalables de tal forma que pueden ser más fácilmente desplegados y
+administrados en conjunto por lo que combinadas permiten la orquestación de sistemas a gran
+escala. Así, todo el ecosistema de aplicaciones que aporta la solución Docker van orientadas a
+dotar de un mayor numero de funcionalidades y herramientas de gestión y automatización para un
+sistema de aplicaciones embebidas en un contenedor virtual.
+Podemos considerar que con Docker podemos realizar empaquetados de aplicaciones como si se
+tratase de una unidad estandarizada y estanca (contenedor) que incluya todo lo necesario para
+ejecutar esa aplicación (Código, librerías, bibliotecas del sistema, herramientas, etc) y que puede
+ser replicado de forma rápida, fiable y sistemática.
+
 \subsection{Orquesta de Aplicacion}
-En capítulos anteriores hemos introducido la herramienta Docker como la solución de
-virtualización de contenedores que vamos a utilizar así como la arquitectura de servidores, red y
-almacenamiento sobre la que se implantará la solución.
-En este capitulo vamos a ver los principales aspectos de Docker, su funcionamiento, modelos de
-uso, pasos de instalación y configuración así como los primeros ejemplos de despliegue de
-aplicaciones sobre esta solución y la herramienta de orquestación estática que incluye Docker.
+
 \subsection{Docker y Otros Container : Mas alla de la virtualizacion}
 - 
 \subsection{Contenedor Docker la Tecnologia de Contenedores a mano}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.15)  15 MAY 2019 11:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.15)  15 MAY 2019 11:05
 entering extended mode
 **"./Trabajo_Encargado n°4.tex"
 ("Trabajo_Encargado n°4.tex"
@@ -357,7 +357,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <9> not available
  [1{C:/Users/Andinosoft - Peru/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.ma
 p}]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 154.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 166.
  [2]
 No file "Trabajo_Encargado n°4".bbl.
 [3] ("Trabajo_Encargado n°4.aux")
@@ -369,7 +369,7 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
 Here is how much of TeX's memory you used:
  4397 strings out of 492945
  60281 string characters out of 3120922
- 143051 words of memory out of 3000000
+ 143888 words of memory out of 3000000
  8255 multiletter control sequences out of 15000+200000
  5452 words of font info for 20 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -384,7 +384,7 @@ sfonts/cm/cmr9.pfb><C:/Users/Andinosoft - Peru/AppData/Local/Programs/MiKTeX 2.
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/A
 ndinosoft - Peru/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmti9.pfb>
-Output written on "Trabajo_Encargado n°4.pdf" (3 pages, 102130 bytes).
+Output written on "Trabajo_Encargado n°4.pdf" (3 pages, 102959 bytes).
 PDF statistics:
  40 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
