@@ -47,7 +47,7 @@
 \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
 \renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
 \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{0.5em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{0.2em}{} % Change the look of the section titles
 
 \usepackage{fancyhdr} % Headers and footers
 \pagestyle{fancy} % All pages have headers and footers
@@ -151,17 +151,85 @@ modo una mayor abstracción aislando la componente "lógica de la aplicación" d
 
 
 \subsection{Contenedores}
+\textbf{¿Que son los contenedores?}\\
+Es una pregunta básica, pero necesaria. Podemos pensar en un contenedor como un servidor que arranca desde una imagen estática predefinida con un sistema operativo con un kernel Linux y con las librerías y recursos mínimos necesarios de CPU, memoria, almacenamiento, etc. Realmente, un contenedor consiste en el empaquetado de una aplicación para que pueda correr en cualquier sistema abstrayéndose de la plataforma sobre la que está corriendo.
+\textbf{}\\
+\textbf{}\\
+\textbf{¿Para qué se pueden usar los contenedores?}\\
+Con una aplicación empaquetada con versiones de sistema, librerías y demás recursos óptimos para su ejecución, evitamos problemas de incompatibilidades. Por ejemplo, \textbf{si los contenedores son independientes de las características del servidor donde se alojan}, evitamos problemas a la hora de que actualicemos este.\textbf{}
+Otro ejemplo es que un contenedor puede ejecutarse en cualquier servidor Linux, Microsoft e incluso en MacOS nos facilita las migraciones entre máquinas.\textbf{}
+\textbf{}\\
+Las aplicaciones que pueden ejecutarse en un contenedor son múltiples y variadas, \textbf{desde un apache a una BBDD Mongo.}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{¿Qué ventajas nos ofrecen los contenedores sobre un servidor físico o virtual?}\\
+Al principio del texto hablábamos de los cuatro pilares que sostienen el éxito de los servicios que nos ofrecen desde la nube pública y que también son aplicables cuando trabajamos con contenedores. Con el uso de orquestadores de contenedores tipo Kubernetes, Openshift, Mesos o un largo etcétera, podemos asegurar que \textbf{nuestra aplicación va a estar siempre disponible para su ejecución.} Podremos aumentar o disminuir el número de contenedores en función de nuestras necesidades fácilmente y asegurar que, en caso de fallo del contenedor por cualquier casuística, este podrá arrancar automáticamente de manera instantánea.
+\textbf{}\\
+\textbf{}\\
+Los contenedores están diseñados \textbf{para que tengan una vida corta pero útil: arrancan, ejecutan su función y mueren.} Debido a que se trata de sistemas muy livianos, los contenedores normalmente tardan pocos segundos en arrancar. Por el hecho de ser tan efímeros, están enfocados a ejecutar la aplicación o aplicaciones para la que fueron creados y una vez finalizada, se elimina dicho contenedor. De esta manera, mientras no necesitemos ejecutar una aplicación en concreto, estamos dejando libres los recursos del servidor anfitrión para poder ser utilizados por otros contenedores. \textbf{De esta manera no hace falta mantener un servidor encendido 24 horas} consumiendo energía y recursos si solo va hacer, por ejemplo, una inserción de una tabla en una base de datos en un proceso batch a final de mes.
+\textbf{}\\
+\textbf{}\\
+\textbf{¿Puedo usar un contenedor como un servidor normal?}\\
+Podemos acceder a un contenedor a través de una shell como si de un servidor normal se tratase. También podemos ejecutar comandos contra un contenedor que esté corriendo, pero tenemos que tener en cuenta que, como hemos indicado antes, un contenedor arranca de una imagen estática predefinida. Es decir, \textbf{salvo que lo indiquemos a propósito}, todos los cambios que hagamos en nuestro contenedor, los perderemos cuando lo matemos. Si arrancamos un nuevo contenedor con la misma imagen, tendremos la misma configuración que tenía antes de hacer ningún cambio.
+\textbf{}\\
+\textbf{}\\
+\textbf{¿Qué pasa con mis cambios realizados sobre la imagen del contenedor?}\\
+Cuando tenemos un contenedor corriendo, podemos hacer cualquier cambio de configuración sobre su imagen inicial. En el caso de que quisiéramos conservar los cambios que hemos aplicado, podemos salvarlos en una imagen nueva. Esta nueva imagen, a su vez, estaría disponible para ser utilizada por otros contenedores y así sucesivamente.
+
+\textbf{}\\
+\textbf{}\\
+
  \textbf{A). Virtualización de Contenedores }\\
 \textbf{}\\
+La virtualización basada en contenedores, también llamada virtualización del sistema operativo, es una aproximación a la virtualización en la cual la capa de virtualización se ejecuta como una aplicación en el sistema operativo (OS). En este enfoque, el kernel del sistema operativo se ejecuta sobre el nodo de hardware con varias máquinas virtuales (VM) invitadas aisladas, que están instaladas sobre el mismo. Los huéspedes aislados se denominan contenedores.\textbf{}\\
 \textbf{}\\
+Con la virtualización basada en contenedores, no existe la sobrecarga asociada con tener a cada huésped ejecutando un sistema operativo completamente instalado. Este enfoque también puede mejorar el rendimiento porque hay un solo sistema operativo encargándose de los avisos de hardware. Una desventaja de la virtualización basada en contenedores, sin embargo, es que cada invitado debe utilizar el mismo sistema operativo que utiliza el host.
+\textbf{}\\
+Por lo general, los entornos corporativos evitan la virtualización basada en contenedores, prefiriendo los hipervisores y la opción de tener muchos sistemas operativos. Un entorno virtual basado en contenedor, sin embargo, es una opción ideal para los proveedores de alojamiento que necesitan una manera eficiente y segura para ofrecer sistemas operativos para que los clientes ejecuten sus servicios en ellos.
+
 \textbf{}\\
  \textbf{B). Diferencia entre Virtualizacion Clasica y Virtualizacion de Contenedores}\\
 \textbf{}\\
- \textbf{C).Tecnologias a Utilizar}\\
+\textbf{- Virtualización clásica}\\
+La virtualización tal y como se entiende habitualmente supone el despliegue de múltiples máquinas software completas dentro de un mismo hardware. Dependiendo de cómo se hace el despliegue existen dos tipos de virtualización, hipervisores de tipo 1 o instalado directamente como sistema operativo, e hipervisores de tipo 2 o instalados sobre un sistema operativo comercial; como se comentaron en Mi SCADA en las nubes.\textbf{}\\
+La virtualización completa de las máquinas permite que unas sean independientes de las otras, de manera que se pueden gestionar como si fuesen máquinas hardware separadas, pero favoreciendo la ampliación de recursos en caso de ser necesario.
+\textbf{}\\
+
+\textbf{- Virtualización mediante contenedores}\\
+
+El último avance de la virtualización es la utilización de contenedores. Con esta tecnología no se virtualiza el sistema entero, sino que, partiendo de una imagen de base, se registran los cambios realizados tanto por instalaciones como por desinstalaciones, de aplicaciones y servicios. De esta manera los ficheros de las imágenes de las máquinas son mucho menores y las necesidades de espacio se reducen considerablemente.\textbf{}\\
+\textbf{}\\
+\textbf{-Comparación entre virtualización tradicional y con contenedores}\\\textbf{}\\
+Los contenedores están aislados unos de otros, pero comparten un mismo sistema operativo, librerías y binarios. Esto hace que el despliegue sea mucho más rápido que una instalación nueva, así como los reinicios y las migraciones, pero tiene el problema de que una vulnerabilidad en una máquina anfitrión puede afectar también al resto, al compartir la base del sistema operativo.
+
 \textbf{}\\
 \textbf{}\\
- \textbf{D).Ventajas y Desventajas}\\
+ \textbf{C).Ventajas y Desventajas}\\
 \textbf{}\\
+La principal motivación para virtualizar un sistema SCADA es reducir hardware e infraestructura, y con ello los gastos; pero también existen otras razones.\textbf{}\\
+\textbf{}\\
+La virtualización de los sistemas de control permite integrarlos en el entorno corporativo y con ello estrechar los lazos entre diferentes departamentos y compartir responsabilidades y toma de decisiones, mejorando la colaboración y la integración de medidas de seguridad.
+\textbf{}\\
+Como la virtualización se utiliza para agrupar máquinas en un mismo hardware, que son posteriormente accedidas de forma remota, esta característica permite mejorar el trabajo del personal que debe acceder a información con diferentes niveles de seguridad, utilizando diferentes máquinas virtuales correctamente segmentadas en lugar de diferentes equipos separados por air-gap.
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{Ventajas: }\\
+\item	Reducción de hardware y costes operacionales
+\item	Rápida recuperación frente a desastres a snapshots y clones
+\item	Pruebas seguras arquitecturas de seguridad
+\item	Mejora del desarrollo y aseguramiento de la calidad
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{Desventajas:}\\
+
+\item	Dificultad para encontrar el origen del problema.
+\item	Posibilidad de perder muchos sistemas en un servidor
+\item	Incremento de la superficie de ataque ya que se añade el hipervisor
+\item	Posibles problemas con interfaces físicos, como puertos USB, RS.232 etc.
+\item	Rendimiento
 
 
 
@@ -207,6 +275,12 @@ Docker, me permite meter en un contenedor (“una caja”, algo auto contenido, 
 
 \section{Conclusiones}
 
+Ambas tecnologías ofrecen ventajas distintas:
+\textbf{}\\
+La virtualización viene con una plétora de herramientas probadas a lo largo del tiempo, plataformas de gestión y orquestación, sondas virtuales, soluciones de infraestructura virtual hiperconvertidas y mucho más. La portabilidad y la interoperabilidad son las características que destacan frente a los contenedores.
+\textbf{}\\
+\textbf{}\\
+Los contenedores ofrecen una mayor eficiencia de recursos y agilidad de servicio. Aunque no parezca mucho, abre la puerta a un modelo de microservicios que puede escalar más rápido y de manera más eficiente. Los contenedores de papel se ajustan más a las iniciativas de NFV/SDN y la industria se ha dado cuenta de que Kubernetes es uno de los proyectos de código abierto de más rápido crecimiento hasta la fecha.
 
 
 
@@ -219,16 +293,26 @@ Docker, me permite meter en un contenedor (“una caja”, algo auto contenido, 
 
 \begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
 
-\bibitem[]{}
+
 
 \newblock 
-http://revistatelematica.cujae.edu.cu/
+1. http://revistatelematica.cujae.edu.cu/
 index.php/tele/article/view/23/21
-\break
-https://programarfacil.com/blog/
+ \break
+\newblock 
+2. https://programarfacil.com/blog/
 que-es-un-orm/
-
-
+\break
+\newblock 
+3. https://www.beeva.com/beeva-view/tecnologia/mas-alla-de-la-virtualizacion-contenedores/
+\break
+\newblock
+4. https://searchdatacenter.techtarget.com/
+es/definicion/virtualizacion-basada-en-contenedores-virtualizacion-a-nivel-de-sistema-operativo
+\break
+\newblock
+5. https://www.incibe-cert.es/blog/asegurando-virtualizacion-tus-sistemas-control
+\break
 
 
 \newblock {\em }
