@@ -256,16 +256,53 @@ Docker, me permite meter en un contenedor (“una caja”, algo auto contenido, 
 
 
 \subsection{Hypervisores Bare Metal}
+\textbf{}\\
+Hipervisores de tipo 1 (También llamados nativos, unhosted o bare-metal)
+Un hypervisor bare-metal no funciona bajo un sistema operativo instalado sino que tiene acceso directo sobre los recursos hardware; el hipervisor se carga antes que ninguno de los sistemas operativos invitados, y todos los accesos directos a hardware son controlados por él.
+Aunque esta es la aproximación clásica y más antigua de la virtualización por hardware, actualmente las soluciones más potentes de la mayoría de fabricantes usa este enfoque.
+Nota: es muy frecuente que a los hipervisores en general se les aplique el término VMM (Monitores de máquina virtual), mientras que el término “Hypervisor” se reserva para los hipervisores de tipo 1.
+
 
  \textbf{A). Tipos de Hypervisores }\\
 \textbf{}\\
+
+\textbf{1) Monolítico}\newline
+Son hipervisores que emulan hardware para sus máquinas virtuales.
+Esta aproximación, usada por productos como VMWare ESX, obliga a usar una gran cantidad de código que se interpone entre los recursos físicos reales y las operaciones de acceso a ellos efectuadas por las máquinas virtuales.\newline
+
+El proceso que sigue una llamada a hardware en un sistema virtualizado usando un hipervisor de tipo monolítico es:\newline
+1.- El hardware emulado debe interceptar la llamada.\newline
+2.- El VMM redirije estas llamadas hacia los drivers de dispositivo que operan dentro del hipervisor, lo cual requiere de numerosos cambios de contexto en el código de la llamada.\newline
+3.- Los drivers del hipervisor enrutan la llamada hacia el dispositivo físico.\newline
+    
+
+Este funcionaminto obliga a desarrollar drivers específicos para el hipervisor de cada componente hardware.\newline
 \textbf{}\\
+
+\textbf{2) De MicroKernel}\newline
+En esta aproximación el hipervisor se reduce a una capa de software muy sencilla, cuya única funcionalidad es la de particionar el sistema físico entre los diversos sistemas virtualizados.\newline
+Con esta manera de funcionar los hipervisores de microkernel no requieren de drivers específicos para acceder al hardware.\newline
+En el caso de Hyper-V, el acceso a los recursos físicos se hace desde la partición primaria, usando los drivers nativos de Windows Server 2008 R2.\newline
+En las particiones hija se utilizan drivers sinténticos, que son simplemente enlaces a los drivers reales ubicados en la partición primaria.\newline
+De esta manera los hipervisores de microkernel no sólo aumentan el rendimiento al reducir el código intermedio y el número de cambios de contexto necesarios, sino que también aumentan la estabilidad de los sistemas, al haber menos componentes, y sobre todo la seguridad, al reducir la superficie de ataque del hipervisor.\newline
 \textbf{}\\
  \textbf{B). Ventajas y Desventajas}\\
+\textbf{Ventajas:}\newline
+Obtendremos un mejor rendimiento, escalabilidad y estabilidad.\newline
+\textbf{Desventajas:}\newline
+En este tipo de tecnología de virtualización el hardware soportado es más limitado ya que normalmente es construido con un conjunto limitado de drivers.\newline
 \textbf{}\\
- \textbf{C). Productos Comerciales}\\
-\textbf{}\\
-\textbf{}\\
+\textbf{C). Productos Comerciales}\\
+Entre los hypervisores de este tipo encontramos: VMware ESX o ESXi, Microsoft Hyper-V, Citrix XenServer u Oracle VM.\newline
+\textbf{VMware ESX y ESXi}\\
+VMware es el fabricante con la tecnología de virtualización más madura del mercado. Ofrece características avanzadas y escalabilidad. En contra tiene los altos costes de licenciamiento.\newline
+\textbf{Microsoft Hyper-V}\\
+Hyper-V se ha convertido en un serio competidor de VMware ESX (ESXi). En contra tiene que no dispone de ciertas características avanzadas disponibles en los productos de VMware. De todos modos, como no podía ser de otra forma, se integra perfectamente con los productos Windows. Para aquellos que no necesitan funcionalidades avanzadas, puede ser un producto perfecto para llevar a cabo su proyecto de virtualización.\newline
+\textbf{Citrix XenServer}\\
+Citrix también tiene una plataforma de virtualización basada en el proyecto open source Xen. El hypervisor es gratis, pero de igual modo a como pasa con VMware ESXi, no dispone de características avanzadas. Éstas se obtienen a partir de licencias que ofrecen gestión avanzada, automatización y alta disponibilidad.\newline
+\textbf {OracleVM}\\
+De igual modo a Citrix, Oracle ha desarrollado su hypervisor a partir del proyecto Xen. El producto de Oracle no presenta funcionalidades avanzadas que podemos encontrar en otros hypervisores bare-metal. Además su ciclo de desarrollo es lento y limitado, por lo que no puede competir con los productos de VMware, Microsoft o Citrix. Sin embargo, como es lógico, es un producto que se adapta perfectamente a los productos de Oracle.\newline
+
 
 \subsection{Maquinas virtuales VS Contenedores}
 \textbf{}\\
@@ -312,6 +349,9 @@ es/definicion/virtualizacion-basada-en-contenedores-virtualizacion-a-nivel-de-si
 \break
 \newblock
 5. https://www.incibe-cert.es/blog/asegurando-virtualizacion-tus-sistemas-control
+\break
+\newblock
+6. http://www.datakeeper.es/?p=716
 \break
 
 
