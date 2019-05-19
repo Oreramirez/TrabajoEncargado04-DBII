@@ -63,7 +63,47 @@
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
 
+\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+\title{VIRTUALIZACIÓN Y CONTENEDORES} % Article title
+\author{%
+\textsc{Marko Antonio Rivas Rios} \\[1ex] % Your name
+\textsc{Jorge Luis Mamani Maquera} \\[1.01ex] % Your name
+\textsc{Orlando Antonio Acosta Ortiz} \\[1.02ex] % Your name
+\textsc{Yofer Nain Catari Cabrera} \\[1.03ex] % Your name
+\textsc{Orestes Ramirez Ticona} \\[1.04ex] % Your name
+\textsc{Roberto Zegarra Reyes} \\[1.05ex] % Your name
+\normalsize Universidad Privada de Tacna \\  % Your institution
+\normalsize {} % Your email address
+%\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
+%\textsc{Jane Smith}\thanks{Corresponding author} \\[1ex] % Second author's name
+%\normalsize University of Utah \\ % Second author's institution
+%\normalsize \href{mailto:jane@smith.com}{jane@smith.com} % Second author's email address
+}
+\date{Mayo 13, 2019} % Leave empty to omit a date
+\renewcommand{\maketitlehookd}{%
+\begin{abstract}
+\noindent En este trabajo se realizará un estudio de las tecnologías de virtualización de
+contenedores con el fin de implementar y poner en marcha un sistema que permita
+orquestar el despliegue de aplicaciones sobre un entorno empresarial.
+Para ello, se realizará en primera instancia un análisis de los sistemas de virtualización
+más habituales para continuar introduciendo los conceptos y sistemas de virtualización
+de contenedores. Una vez introducida la parte teórica se analizan distintas
+herramientas de virtualización de contenedores centrándonos en la herramienta
+Docker para la cual se detalla su arquitectura, funcionamiento y proceso de instalación
+para finalizar con un par de ejemplos prácticos de despliegue de servicios.
+A continuación, una vez que ya hemos implementado y analizado un sistema de
+virtualización de contenedores como tecnología necesaria de base, pasamos a
+estudiar distintas soluciones del mercado para implementar un sistemas de
+orquestación basado en microservicios para el despliegue de aplicaciones de carácter
+corporativo. Finalizamos con la implantación, instalación y puesta en marcha del
+sistema estudiado acompañado de unos ejemplos de orquestación usando dos
+aplicaciones de código abierto que se ven bastante habitualmente en los entornos
+corporativos actuales para dar soporte a distintas soluciones.
+\end{abstract}
+}
 
 
 %----------------------------------------------------------------------------------------
