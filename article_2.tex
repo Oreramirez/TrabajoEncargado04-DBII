@@ -130,9 +130,136 @@ modo una mayor abstracción aislando la componente "lógica de la aplicación" d
 \section{Objetivos}
 \begin{flushright}
 \begin{itemize}
-\lettrine[nindent=0em,lines=2]{E}l desarrollo
+\lettrine[nindent=0em,lines=2]{S}e busca saber un poco mas sobre:
 
 %------------------------------------------------
+\textbf{}\\
+\textbf{¿Qué es la virtualización?}\\
+-------------------------------------
+\textbf{}\\
+- Técnica que permite, mediante software, convertir una máquina
+real en varias máquinas independientes que se ejecutan al mismo
+tiempo.\textbf{}\\
+- Cada una de estas máquinas independientes recibe el nombre de
+“máquina virtual huesped”, y puede estar gestionada por
+cualquier sistema operativo (o casi).\textbf{}\\
+\textbf{}\\
+- La máquina real sobre la que se ejecutan los huéspedes se
+denomina “máquina anfitriona”.
+- El software que hace posible la ejecución simultánea de varios
+huéspedes sobre un único anfitrión es el “hipervisor”.
+\textbf{}\\
+\textbf{}\\
+\textbf{¿Qué es la virtualización en contenedores?}\\
+----------------------------------------------------
+- Cada huésped “verá” su propia CPU, memoria, discos, etc,
+independientemente de los recursos de que disponga el anfitrión
+o el resto de huéspedes.
+\textbf{}\\
+\textbf{}\\
+\textbf{¿Qué se consigue con la virtualización?}\\
+-----------------------------------------------
+\textbf{}\\
+• En centros de datos:\textbf{}\\
+\textbf{}\\
+- Integrar en una única máquina varios servidores; se ahorra en:
+adquisición de equipos, actualización de hardware, costes de
+mantenimiento (refrigeración, por ejemplo), espacio, etc.
+\textbf{}\\
+- Se mantiene entre máquinas el mismo nivel de aislamiento que si
+éstas estuviesen físicamente separadas (un fallo en una máquina
+virtual no afecta al resto).
+\textbf{}\\
+\textbf{}\\
+\textbf{¿Qué se consigue con la virtualización en contenedores?}\\
+------------------------------------------------------
+\textbf{}\\
+• En entornos personales:
+\textbf{}\\
+\textbf{}\\
+- Lograr, con una única máquina, separar varios entornos de
+desarrollo y/o pruebas.
+\textbf{}\\
+\textbf{}\\
+• Aprender a utilizar nuevo software o nuevas técnicas sin poner en
+riesgo el software preexistente en nuestro equipo. Ejemplos:
+\textbf{}\\
+\textbf{}\\
+- Instalar sobre Windows una máquina virtual VMWare que sea un Linux\textbf{}\\
+Centos con Oracle express instalado.
+\textbf{}\\
+- Montar y probar una red local formada por varias máquinas virtuales
+sobre un único anfitrión.
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{Virtualización}\\
+--------------------------
+\textbf{}\\
+La virtualización es una técnica que permite abstraer, por medio de herramientas SW, el
+HW proporcionado por una máquina física (anfitriona) para simular el funcionamiento de otra
+máquina (huesped). Al conjunto de la máquina huésped y su SO propio se le llama máquina
+virtual, la cual utiliza los recursos de la máquina física anfitriona sin ser la realmente poseedora
+de los mismos. Esto implica ciertas ventajas potenciales como economía de recursos, ahorrro
+de espacio fisico, coexistencia de multiples SO en una única máquina, mayor aislamiento entre
+procesos, etc.
+\textbf{}\\
+
+\textbf{}\\
+\textbf{Contenedor}\\
+--------------------------
+\textbf{}\\
+Docker es un proyecto que permite crear aplicaciones en contenedores de software
+que sean ligeras, portátiles y autosuficientes Los contenedores son paquetes de elementos
+que te permiten crear un entorno donde correr aplicaciones independientemente del sistema
+operativo del host El propósito de este proyecto es investigar uso de la virtualización
+de servidores basada en Docker Containers, entender la tecnología que se ejecuta detrás de ella, 
+conocer las posibilidades que tiene y construir un clúster de contenedores que ejecuten una aplicación.
+\textbf{}\\
+\textbf{}\\
+\textbf{Tipos de virtualización}\\
+------------------------------------
+\textbf{}\\
+La virtualización permite la consolidación de múltiples recursos de TI, 
+eleva los índices de utilización de servidores y almacenamientos,
+ahorra costos y espacios y permite elevar los índices de disponibilidad. 
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{Los Siguientes son tipos de virtualización:}\\
+
+\textbf{}\\
+- Virtualización de Servidor
+\textbf{}\\
+- Virtualización de Almacenamiento
+\textbf{}\\
+- Virtualización de Escritorio
+\textbf{}\\
+- Virtualización de Redes
+\textbf{}\\
+- Virtualización de Redes
+\textbf{}\\
+\textbf{}\\
+\textbf{Ventajas de la Virtualización}\\
+------------------------------------------
+\textbf{}\\
+- Disminuye la utilización de hardware físico.
+
+- Reducción de gastos. Al disminuir los hardwares físicos los gastos asociados a ellos (luz, mantenimiento, etc.) se ven recortados.
+
+- Aumento de la eficiencia. A medida que la virtualización se va estableciendo dentro de una compañía, los usuarios utilizarán más eficiente los componentes del hardware y, por tanto, no será necesario establecer diferentes conexiones de internet para servidores, ordenadores e emails.
+
+- Largo ciclo de vida. Con la virtualización los programas se almacenan en servidores, lo que implica que la necesidad de equipos más modernos es más reducida que en un hardware.
+
+
+
+
+
+
+
+
+
 
 
 \section{Virtualización y Contenedores}
