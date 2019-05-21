@@ -267,11 +267,126 @@ ahorra costos y espacios y permite elevar los índices de disponibilidad.
 \subsection{Virtualización}
 
 
- \textbf{A). Tipos de Virtualizacion }\\
+ \textbf{A). Modelos principales de virtualizacion }\\
+
 \textbf{}\\
+ \textbf{1.  Virtualización de plataforma }\\
+------------------------------------
+\textbf{}\\
+ Este es un modelo especialmente a tener en cuenta, ya que es el aplicado para lo que se llama consolidación de servidores. La virtualización o consolidación de servidores puede verse como un particionado de un servidor físico de manera que pueda albergar distintos servidores dedicados (o privados) virtuales que ejecutan de manera independiente su propio sistema operativo y dentro de él los servicios que quieran ofrecer, haciendo un uso común de manera compartida y aislada sin ser conscientes del hardware subyacente
+
+ \textbf{1.1  Sistemas operativos invitados }\\
+------------------------------------
+\textbf{}\\
+Sobre una aplicación para virtualización no
+hace uso de hipervisor u otra capa de virtualización que corre sobre la instancia
+de un sistema operativo sistema operativo host se permite la ejecución de
+servidores virtuales con sistemas operativos independientes.
+
+ \textbf{1.2  Emulacion }\\
+------------------------------------
+\textbf{}\\
+Un emulador que replica una arquitectura hardware al completo
+procesador, juego de instrucciones, periféricos hardware- permite que se
+ejecuten sobre él máquinas virtuales.
+
+\textbf{1.3  Virtualizacion Completa }\\
+------------------------------------
+\textbf{}\\ 
+También llamada nativa. La capa de virtualización, un
+hipervisor, media entre los sistemas invitados y el anfitrión, la cual incluye
+código que emula el hardware subyacente –si es necesario- para las máquinas
+virtuales, por lo que es posible ejecutar cualquier sistema operativo sin
+modificar, siempre que soporte el hardware subyacente.
+
+\textbf{1.4  Virtualizacion a nivel del sistema operativo }\\
+------------------------------------
+\textbf{}\\
+Virtualiza los servidores sobre el
+propio sistema operativo, sin introducir una capa intermedia de virtualización.
+
+\textbf{1.5 Virtualizacion a nivel del kernel }\\
+\textbf{}\\
+------------------------------------
+\textbf{}\\
+Convierte el núcleo Linux en hipervisor
+utilizando un módulo, el cual permite ejecutar máquinas virtuales y otras
+instancias de sistemas operativos en el espacio de usuario del núcleo Linux
+anfitrión
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+ \textbf{2. Virtualizacion de recursos }\\
+------------------------------------
+\textbf{}\\
+En este segundo caso el recurso que se abstrae es un recurso
+individual de un computador, como puede ser la conexión a red, el almacenamiento
+principal y secundario, o la entrada y salida.
+\textbf{}\\
+ \textbf{2.1  Encapsulamiento }\\
+------------------------------------
+\textbf{}\\
+Se trata de la ocultación de la complejidad y características del
+recurso creando una interfaz simplificada. Es el caso más simple de
+virtualización de recursos, como se puede ver.
+\textbf{}\\
+ \textbf{2.2  Memoria virtual }\\
+------------------------------------
+\textbf{}\\
+Permite hacer creer al sistema que dispone de mayor cantidad
+de memoria principal y que se compone de segmentos contiguos. Como
+sabemos, es usada en todos los sistemas operativos modernos. 
+\textbf{}\\
+\textbf{2.3  Virtualización de almacenamientl }\\
+------------------------------------
+\textbf{}\\
+Abstracción completa del almacenamiento
+lógico sobre el físico (disco y almacenamiento son el recurso abstraído). Es
+completamente independiente de los dispositivos hardware.
+\textbf{}\\
+\textbf{2.3 Virtualización de red }\\
+------------------------------------
+\textbf{}\\
+La virtualización de red consiste en la creación de un
+espacio de direcciones de red virtualizado dentro de otro o entre subredes. Es
+fácil ver que el recurso abstraído es la propia red. Ejemplos bien conocidos de
+virtualización de red son OpenVPN y OpenSwarm, que permiten crear VPNs. 
+\textbf{}\\
+\textbf{3. Virtualización de aplicaciones }\\
+------------------------------------
+\textbf{}\\
+ Las aplicaciones son ejecutadas encapsuladas sobre el
+sistema operativo  de manera que aunque
+creen que interactúan con él de la manera habitual, en realidad no
+lo hacen, sino que lo hacen bien con una máquina virtual de aplicación o con algún
+software de virtualización. 
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{4. Virtualización de escritorio }\\
+------------------------------------
+\textbf{}\\
+ Consiste en la manipulación de forma remota del escritorio
+de usuario (aplicaciones, archivos, datos), que se encuentra separado de la máquina
+física, almacenado en un servidor central remoto en lugar de en el disco duro del
+computador local. 
 \textbf{}\\
 \textbf{}\\
  \textbf{B). Cuales son las Ventajas de la Virtualización}\\
+
+\textbf{}\\
+-Hardware de los Servidores Infrautilizado
+-Se agota el Espacio en los Data Centers 
+-Demanda de una mejor Eficiencia Energética 
+
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+
+
+
+
 
 
 
